@@ -6,13 +6,13 @@
   <div class="col">
     <!-- Para mandar del padre al hijo -->
     <dbz-list
-      [characterList]="characters"
-      (onDelete)="onDeleteCharacter($event)" ></dbz-list>
+      [characterList]="dbzService.characters"
+      (onDelete)="dbzService.onDeleteCharacter($event)" ></dbz-list>
   </div>
 
 
   <div class="col">
     <!-- Para mandar del hijo al padre -->
-    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-add-character>
   </div>
 </div>
