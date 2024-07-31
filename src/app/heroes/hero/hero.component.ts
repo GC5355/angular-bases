@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class HeroComponent {
+
   public name: string = 'ironman'
   public age: number = 45
 
@@ -25,4 +26,9 @@ export class HeroComponent {
   changeAge():void{
     this.age = 48
   }
+
+  resetForm() {
+    this.name= 'ironman',
+    this.age= 45
+    }
 }
