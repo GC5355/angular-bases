@@ -7,12 +7,21 @@ import { Character } from '../interfaces/character.interface';
   templateUrl: './main-page-component.html'
 })
 
-
-
 export class MainPageComponent {
   public characters: Character[] = [
-    {name: 'Goku', power: 1000},
-    {name: 'Vegeta', power: 800},
-    {name: 'Otro', power: 700},
+    { name: 'Goku', power: 1000 },
+    { name: 'Vegeta', power: 800 },
+    { name: 'Otro', power: 700 },
   ];
+
+  onNewCharacter(character: Character): void {
+    this.characters.push(character);
+    //this.characters.unshift(character);
+    // console.log(this.characters);
+
+  }
+
+  onDeleteCharacter(index: number): void {
+    this.characters.splice(index, 1);
+  }
 }
